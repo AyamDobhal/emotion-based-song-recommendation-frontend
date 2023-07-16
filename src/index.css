@@ -1,0 +1,39 @@
+.img {
+  width: 130px;
+  transition: all 0.3s ease-in-out;
+}
+
+.img:hover {
+  transform: scale(1.1);
+}
+
+.album {
+  width: 200px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.album a {
+  color: #3edb9c;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.divAlbum {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fav {
+  display: flex;
+  flex-direction: column;
+}
+
+.labelFav {
+  margin-top: 15px;
+}
