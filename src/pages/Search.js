@@ -39,7 +39,7 @@ class Search extends React.Component {
   handleClick = () => {
     this.fetchSongs();
     // document.getElementById("inputText").value = "";
-    this.setState({ inputText: " " });
+    this.setState({ buttonDisabled: true, inputText: "" });
   };
 
   fetchSongs = async () => {
@@ -52,17 +52,18 @@ class Search extends React.Component {
   render() {
     const { buttonDisabled, inputText, loading, response } = this.state;
     return (
-      <MainSearch>
+      <MainSearch >
         <Header />
         {loading ? (
           <Loading />
         ) : (
-          <MainForm>
+          <MainForm >
             <h1>Hello, How are you ?:</h1>
             <label htmlFor="artist">
               <Input
                 type="text"
-                id="inputText"
+                id="inputText" autoComplete="off"
+                
                 placeholder="Type here.."
                 value={inputText}
                 onChange={this.enterText}
@@ -73,6 +74,7 @@ class Search extends React.Component {
               disabled={buttonDisabled}
               onClick={this.handleClick}
               className="searchButton"
+              
             >
               Send
             </Button>
